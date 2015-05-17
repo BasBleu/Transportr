@@ -1,5 +1,9 @@
 var db = db.getSiblingDB('Transportr');
 
+db.dropDatabase();
+
+db = db.getSiblingDB('Transportr');
+
 db.vendors.insert({"name": "Vinayak Kale", "vehicleNo": "MH12 AJ142" ,
     "phoneNo": "+917798292606", "area": "Katraj", "radius": "90"});
 
