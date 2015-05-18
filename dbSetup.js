@@ -29,3 +29,16 @@ db.areas.insert({"name": "Law College Road", "lat": 18.5142973, "lng": 73.828749
 db.areas.insert({"name": "Pimpri", "lat": 18.6297811, "lng": 73.7997094});
 db.areas.insert({"name": "Kondhwa", "lat": 18.4770906, "lng": 73.89068689999999});
 db.areas.insert({"name": "Katraj", "lat": 18.4575324, "lng": 73.8677464});
+
+db.vehicleTypes.insert({"name": "Trailer"});
+db.vehicleTypes.insert({"name": "Tempo"});
+db.vehicleTypes.insert({"name": "Pick-up"});
+db.vehicleTypes.insert({"name": "Tipper"});
+db.vehicleTypes.insert({"name": "Container"});
+db.vehicleTypes.insert({"name": "Tractor"});
+db.vehicleTypes.insert({"name": "Refigerated"});
+db.vehicleTypes.insert({"name": "Tanker"});
+db.vehicleTypes.insert({"name": "Flatbed"});
+db.vehicleTypes.insert({"name": "6 Wheel Truck"});
+db.vehicleTypes.insert({"name": "10 Wheel Truck"});
+db.vehicleTypes.insert({"name": "12 Wheel Truck"});
