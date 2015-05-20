@@ -1,0 +1,10 @@
+.headerBar {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.mainHeading {
+    text-align: center;
+    font-weight: normal;
+    color: white;
+}
