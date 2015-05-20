@@ -6,27 +6,27 @@ import groovy.json.JsonSlurper
 class LocationServices {
     private static final String URL = "http://maps.googleapis.com/maps/api/geocode/json";
 
-    private static final String DISTANCE_URL="https://maps.googleapis.com/maps/api/distancematrix/json";
+    private static final String DISTANCE_URL = "https://maps.googleapis.com/maps/api/distancematrix/json";
     //?origins=Kothrud,Pune&destinations=Shivajinagar,Pune&key=AIzaSyBkne3CvO54qrbej3tDli6mIVtnPv4iGr8"
-    private static final String DISTANCE_API_KEY="AIzaSyBkne3CvO54qrbej3tDli6mIVtnPv4iGr8";
+    private static final String DISTANCE_API_KEY = "AIzaSyBkne3CvO54qrbej3tDli6mIVtnPv4iGr8";
     /*
      * Here the fullAddress String is in format like
      * "address,city,state,zipcode". Here address means "street number + route"
      * .
      */
-     def static convertToLatLong(String fullAddress) {
+
+    def static convertToLatLong(String fullAddress) {
 
         URL url = new URL(URL + "?address="
                 + URLEncoder.encode(fullAddress, "UTF-8") + "&sensor=false");
         // Open the Connection
         URLConnection conn = url.openConnection();
 
-        InputStream inputStream = conn.getInputStream() ;
-         def parsedJson = new JsonSlurper().parse(inputStream)
+        InputStream inputStream = conn.getInputStream();
+        def parsedJson = new JsonSlurper().parse(inputStream)
 
-                 inputStream.close();
-//         def parsedJson = new JsonSlurper().parseText(response.toString());
-         println("location::"+fullAddress +"   lat= "+ parsedJson.results[0].geometry.location);
+        inputStream.close();
+        println("location::" + fullAddress + "   lat= " + parsedJson.results[0].geometry.location);
         return parsedJson;
 
 
@@ -62,15 +62,15 @@ class LocationServices {
      * @param origin
      * @param destination
      * @return
-     *        distance in meters
+     * distance in meters
      */
     def static getDistance(String origin, String destination) {
-    URL url= new  URL(DISTANCE_URL+"?origins="+origin+"&destinations="+destination+"&key="+DISTANCE_API_KEY);
+        URL url = new URL(DISTANCE_URL + "?origins=" + origin + "&destinations=" + destination + "&key=" + DISTANCE_API_KEY);
         URLConnection conn = url.openConnection();
-                InputStream inputStream = conn.getInputStream() ;
+        InputStream inputStream = conn.getInputStream();
         def parsedJson = new JsonSlurper().parse(inputStream)
-                inputStream.close();
-        println("distance "+ parsedJson.rows[0].elements[0].distance.value);
+        inputStream.close();
+        println("distance " + parsedJson.rows[0].elements[0].distance.value);
         return parsedJson;
 
 
