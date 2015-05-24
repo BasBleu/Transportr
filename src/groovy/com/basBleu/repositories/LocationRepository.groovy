@@ -20,9 +20,9 @@ class LocationRepository {
         mongoOperations.findAll(Area.class, "area")
     }
 
-    //TODO: Move this to different repository
     def getVehicleTypes() {
         mongoOperations.findAll(VehicleType.class, "vehicleType")
     }
+
 
 }

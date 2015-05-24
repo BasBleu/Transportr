@@ -1,4 +1,5 @@
 import com.basBleu.repositories.LocationRepository
+import com.basBleu.repositories.VendorRepository
 import com.mongodb.Mongo
 import org.springframework.data.mongodb.core.MongoTemplate
 
@@ -10,4 +11,9 @@ beans = {
     locationRepository(LocationRepository) {
         mongoOperations = ref(mongoTemplate)
     }
+
+    vendorRepository(VendorRepository) {
+        mongoOperations = ref(mongoTemplate)
+    }
+
 }

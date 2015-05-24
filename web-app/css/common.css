@@ -53,6 +53,23 @@
 
 }
 
+.vendorsList {
+    //border: 1px solid red;
+    background: rgba(0,0,0,0.5);
+    color: #ffffff;
+    width: 100%;
+    margin-top:  -1.7%;
+}
+
+.vendorsHeader {
+    font-size: 12px;
+    border-bottom-color: #ffffff;
+}
+
+.vendorRow {
+    font-size: 18px;
+    border-bottom-color: #ffffff;
+}
 .searchButton {
     width: 95%;
     margin-left: -10%;

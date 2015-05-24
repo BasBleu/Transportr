@@ -14,5 +14,29 @@
             <h3 class="mainHeading">Transportr</h3>
         </div>
     </nav>
+
+    <table class="table aboveContent vendorsList">
+        <thead class="vendorsHeader">
+        <tr>
+            <th>Transportr Name</th>
+            <th>Phone Number</th>
+            <th>Proximity to your location</th>
+            <th>Rating</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody class="vendorRow">
+        <g:each in="${vendors}" var="vendor">
+            <tr>
+                <td>${vendor.name}</td>
+                <td>${vendor.phoneNo}</td>
+                <td>10 Km</td>
+                <td>${vendor.rating}</td>
+                <td><g:link action="" class="btn btn-danger btn-small">Book a Transportr</g:link></td>
+            </tr>
+        </g:each>
+
+        </tbody>
+    </table>
 </body>
 </html>
