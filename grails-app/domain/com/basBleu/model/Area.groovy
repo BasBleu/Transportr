@@ -1,10 +1,12 @@
 package com.basBleu.model
 
-/**
- * Created by experiment on 20/5/15.
- */
+import groovy.transform.EqualsAndHashCode
+import org.bson.types.ObjectId
+
+@EqualsAndHashCode
 class Area {
+    ObjectId id;
     String name;
-    String latitude;
-    String longitude;
+    Long latitude;
+    Long longitude;
 }

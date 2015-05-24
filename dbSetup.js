@@ -42,3 +42,8 @@ db.vehicleTypes.insert({"name": "Flatbed"});
 db.vehicleTypes.insert({"name": "6 Wheel Truck"});
 db.vehicleTypes.insert({"name": "10 Wheel Truck"});
 db.vehicleTypes.insert({"name": "12 Wheel Truck"});
+
+
+
+
+
