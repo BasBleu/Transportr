@@ -49,10 +49,9 @@
                 <div class="col-lg-12">
                     <select class="form-control" id="vehicleType">
                         <option></option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <g:each in="${vehicleTypes}" var="vehicleType">
+                            <option value="${vehicleType.name}" >${vehicleType.name}</option>
+                        </g:each>
                     </select>
                 </div>
             </div>

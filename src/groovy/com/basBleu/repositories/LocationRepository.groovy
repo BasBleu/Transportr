@@ -1,6 +1,7 @@
 package com.basBleu.repositories
 
 import com.basBleu.model.Area
+import com.basBleu.model.VehicleType
 import com.mongodb.DBCollection
 import org.springframework.data.mongodb.core.MongoOperations
 import org.springframework.data.mongodb.core.query.Criteria
@@ -17,6 +18,11 @@ class LocationRepository {
 
     def getAreas() {
         mongoOperations.findAll(Area.class, "area")
+    }
+
+    //TODO: Move this to different repository
+    def getVehicleTypes() {
+        mongoOperations.findAll(VehicleType.class, "vehicleType")
     }
 
 }

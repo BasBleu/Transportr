@@ -9,9 +9,8 @@ class SearchController {
     LocationRepository locationRepository
 
     def renderSearch() {
-        println("here");
         List areas = locationRepository.getAreas()
-        println("areas = "+areas)
-        render(view: "search", model: [areas: areas])
+        List vehicleTypes = locationRepository.getVehicleTypes()
+        render(view: "search", model: [areas: areas, vehicleTypes: vehicleTypes])
     }
 }
