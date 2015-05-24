@@ -13,4 +13,9 @@ class SearchController {
         List vehicleTypes = locationRepository.getVehicleTypes()
         render(view: "search", model: [areas: areas, vehicleTypes: vehicleTypes])
     }
+
+    def searchVendors() {
+        println("I am here "+params.from + "   "+params.to);
+        render(view: "vendors")
+    }
 }
