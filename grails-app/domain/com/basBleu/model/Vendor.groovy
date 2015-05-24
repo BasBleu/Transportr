@@ -11,5 +11,6 @@ class Vendor {
     String phoneNo
     String area
     int radius
+    float proximity;
     float rating;
 }

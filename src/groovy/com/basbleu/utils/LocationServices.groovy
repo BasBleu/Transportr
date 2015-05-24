@@ -16,7 +16,6 @@ class LocationServices {
      */
 
     def static convertToLatLong(String fullAddress) {
-
         URL url = new URL(URL + "?address="
                 + URLEncoder.encode(fullAddress, "UTF-8") + "&sensor=false");
         // Open the Connection
@@ -71,7 +70,8 @@ class LocationServices {
         def parsedJson = new JsonSlurper().parse(inputStream)
         inputStream.close();
         println("distance " + parsedJson.rows[0].elements[0].distance.value);
-        return parsedJson;
+        def distance= parsedJson.rows[0].elements[0].distance.value;
+        return distance;
 
 
     }

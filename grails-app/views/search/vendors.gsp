@@ -30,7 +30,7 @@
             <tr>
                 <td>${vendor.name}</td>
                 <td>${vendor.phoneNo}</td>
-                <td>10 Km</td>
+                <td>${vendor.proximity}km</td>
                 <td>${vendor.rating}</td>
                 <td><g:link action="" class="btn btn-danger btn-small">Book a Transportr</g:link></td>
             </tr>
