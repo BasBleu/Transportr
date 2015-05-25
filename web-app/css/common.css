@@ -10,6 +10,16 @@
     color: white;
 }
 
+.searchHeading {
+    text-align: center;
+    font-weight: normal;
+    font-size: 25px;
+    color: white;
+    margin-top: -1%;
+    margin-bottom: -1%;
+    background: rgba(0,0,0,0.5);
+}
+
 .aboveContent {
     z-index: 1000;
     position: relative;
@@ -58,7 +68,7 @@
     background: rgba(0,0,0,0.5);
     color: #ffffff;
     width: 100%;
-    margin-top:  -1.7%;
+    margin-top:  0.3%;
 }
 
 .vendorsHeader {
@@ -74,3 +84,4 @@
     width: 95%;
     margin-left: -10%;
 }
+

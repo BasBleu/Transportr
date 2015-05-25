@@ -3,6 +3,7 @@ package com.basBleu.repositories
 import com.basBleu.model.Area
 import com.basBleu.model.VehicleType
 import com.mongodb.DBCollection
+import org.bson.types.ObjectId
 import org.springframework.data.mongodb.core.MongoOperations
 import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query
@@ -24,5 +25,7 @@ class LocationRepository {
         mongoOperations.findAll(VehicleType.class, "vehicleType")
     }
 
-
+  def getAreaByID(ObjectId id) {
+    mongoOperations.findById(id, Area.class)
+  }
 }
