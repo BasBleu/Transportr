@@ -69,7 +69,7 @@ class LocationServices {
         InputStream inputStream = conn.getInputStream();
         def parsedJson = new JsonSlurper().parse(inputStream)
         inputStream.close();
-        println("distance " + parsedJson.rows[0].elements[0].distance.value);
+       // println("distance " + parsedJson.rows[0].elements[0].distance.value);
         def distance= parsedJson.rows[0].elements[0].distance.value;
         return distance;
 
