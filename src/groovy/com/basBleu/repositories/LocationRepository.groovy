@@ -1,8 +1,6 @@
 package com.basBleu.repositories
 
 import com.basBleu.model.Area
-import com.basBleu.model.VehicleType
-import com.mongodb.DBCollection
 import org.bson.types.ObjectId
 import org.springframework.data.mongodb.core.MongoOperations
 import org.springframework.data.mongodb.core.query.Criteria
@@ -18,14 +16,13 @@ class LocationRepository {
     }
 
     def getAreas() {
-        mongoOperations.findAll(Area.class, "area")
+        mongoOperations.findAll(Area.class, "areas")
     }
 
-    def getVehicleTypes() {
-        mongoOperations.findAll(VehicleType.class, "vehicleType")
-    }
 
-  def getAreaByID(ObjectId id) {
-    mongoOperations.findById(id, Area.class)
-  }
+    def getAreaByID(ObjectId id) {
+        mongoOperations.findById(id, Area.class, "areas")
+     }
+
+
 }

@@ -7,10 +7,8 @@ class Vendor {
 
     ObjectId id
     String name
-    String vehicleNo
     String phoneNo
     String area
-    int radius
-    float proximity;
-    float rating;
+    float rating
+
 }

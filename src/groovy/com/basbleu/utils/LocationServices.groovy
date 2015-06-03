@@ -25,8 +25,7 @@ class LocationServices {
         def parsedJson = new JsonSlurper().parse(inputStream)
 
         inputStream.close();
-        println("location::" + fullAddress + "   lat= " + parsedJson.results[0].geometry.location);
-        return parsedJson;
+        return parsedJson.results[0].geometry.location;
 
 
     }
