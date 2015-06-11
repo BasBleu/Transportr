@@ -11,11 +11,13 @@
 }
 
 .searchHeading {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
     text-align: center;
     font-weight: normal;
     font-size: 25px;
     color: white;
-    margin-top: -1%;
+    margin-top: -1.70%;
     margin-bottom: -1%;
     background: rgba(0,0,0,0.5);
 }
@@ -64,7 +66,6 @@
 }
 
 .vendorsList {
-    //border: 1px solid red;
     background: rgba(0,0,0,0.5);
     color: #ffffff;
     width: 100%;
@@ -90,6 +91,6 @@
 }
 .map {
     padding-top: 12px;
-    width: 620px;
-    height: 420px
+    height: 75%;
+    width: 100%
 }

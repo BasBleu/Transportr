@@ -41,7 +41,7 @@ class SearchController {
             //these values will come from gps i think
             vehicle.currentLat= vendorLatLng.lat
             vehicle.currentLng = vendorLatLng.lng
-       
+
         }
 
         render(view: "vendors", model: [vehicles:selectedVehicles as JSON , from : from, to : to, fromLat:fromLat, fromLng: fromLong, vehicleTypes: vehicleTypes, selectedType: params.vehicleType ])
