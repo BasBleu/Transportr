@@ -34,8 +34,9 @@
                 map: map,
                 icon: truckIconBase
             });
+            marker.set("vehicle", vehicle);
             google.maps.event.addListener(marker, 'click', function() {
-                alert("vehicle no. " + vehicle.vehicleNo + " " + " is " +vehicle.proximity + " kms away from you.");
+                alert("vehicle no. " + this.get("vehicle").vehicleNo + " " + " is " +this.get("vehicle").proximity + " kms away from you.");
             });
 
         }
@@ -44,8 +45,8 @@
         var userLatlng = new google.maps.LatLng(${fromLat}, ${fromLng});
         new google.maps.Marker({
             position: userLatlng,
-            map: map,
-            icon: userIconBase
+            map: map
+//            icon: userIconBase
         });
      });
 
@@ -71,14 +72,14 @@
 
     </div>
     </nav>
-<div class="form-group vehicleType">
-    <label class="col-lg-4 control-label ">Vehicle Type</label></br>
-    <div class="col-lg-12">
-        <g:select id="vehicleType" name="vehicleType" from="${vehicleTypes}" optionKey="id"
-                  optionValue="name" required="" noSelection="${['':'']}" value="${selectedType}" onchange="changeVehicleType() ">
-        </g:select>
-    </div>
-</div>
+%{--<div class="form-group vehicleType">--}%
+    %{--<label class="col-lg-4 control-label ">Vehicle Type</label></br>--}%
+    %{--<div class="col-lg-12">--}%
+        %{--<g:select id="vehicleType" name="vehicleType" from="${vehicleTypes}" optionKey="id"--}%
+                  %{--optionValue="name" required="" noSelection="${['':'']}" value="${selectedType}" onchange="changeVehicleType() ">--}%
+        %{--</g:select>--}%
+    %{--</div>--}%
+%{--</div>--}%
  <div class= "aboveContent map" id="map-canvas"></div>
 
 </body>
